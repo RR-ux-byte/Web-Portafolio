@@ -112,18 +112,19 @@ img {
         margin-top: 10px;
         margin-right: 0;
     }
-/* 🔹 Ajustes para que la imagen no se salga en móviles */
-.foto {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-img {
-    max-width: 100%;
-    height: auto;
+    /* 🔹 Ajustes para que la imagen no se salga en móviles */
+    .foto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
-}   
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+}
 
 /* 🔹 Estilos del Footer */
 footer {
