@@ -121,13 +121,13 @@ img {
         width: 100%;
         overflow: hidden; /* Evita que la imagen se desborde */
         padding: 0; /* Evita que el padding afecte el ancho */
-        box-sizing: border-box; /* Asegura que el padding no haga crecer el div */
+        box-sizing: border-box;
     }
 
     img {
-        max-width: 90%; /* Ajusta la imagen al tamaño del contenedor */
+        max-width: 80%; /* Reduce un poco el tamaño en móviles */
         height: auto;
-        display: block; /* Evita espacios en blanco alrededor de la imagen */
+        display: block; /* Elimina márgenes innecesarios */
     }
 }
 
