@@ -1,0 +1,249 @@
+html, body {
+    font-family: 'Bangers', cursive;
+    background-color: #0075fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    cursor: url('icons8-cursor-50.png') 16 16, auto !important;
+}
+
+a, button, i {
+    cursor: url('icons8-cursor-50.png') 16 16, auto !important;
+}
+
+/* Cursor al pasar por encima de enlaces e iconos */
+a:hover, button:hover, i:hover {
+    cursor: url('icons8-natural-user-interface-2-50.png') 16 16, auto !important;
+}
+
+a:active, button:active, i:active {
+    cursor: url('icons8-natural-user-interface-2-50.png') 16 16, auto !important;
+}
+
+
+/* 🔹 Estilos del Header */
+header {
+    background-color: #ffcc00;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 5px solid #333;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    flex-grow: 1; /* Evita que el título desplace los iconos */
+    text-align: center;
+}
+
+/* 🔹 Estilos de los iconos sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 40px; /* 🔹 Aumentamos el margen derecho para separarlos del borde */
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #0075fa;
+}
+
+/* 🔹 Estilos del contenido principal */
+main {
+    padding: 20px;
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+section {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* 🔹 Estilos de los proyectos */
+.project {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0e0e0, #ffffff);
+    border: 2px dashed #333;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* 🔹 Estilos de las imágenes */
+.project img {
+    width: 250px; /* Ajusta el tamaño según necesidad */
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+    filter: brightness(90%);
+}
+
+/* 🔹 Efecto al pasar el mouse */
+.project img:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+    filter: brightness(100%);
+}
+
+/* 🔹 Efecto para una animación de entrada */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project img {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+
+.image-container img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+/* 🔹 Estilos del texto superpuesto */
+.image-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 8px 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* 🔹 Mostrar el texto al pasar el cursor */
+.image-container:hover .image-text {
+    opacity: 1;
+}
+
+/* 🔹 Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* 🔹 Imagen dentro del modal */
+.modal-content {
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+    animation: zoomIn 0.3s ease-in-out;
+}
+
+/* 🔹 Animación de zoom al abrir */
+@keyframes zoomIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* 🔹 Botón de cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover {
+    color: #ffcc00;
+}
+
+/* 🔹 Texto del modal */
+#caption {
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+
+/* 🔹 Ajustes Responsivos para Pantallas Pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+
+/* 🔹 Estilos del Footer */
+footer {
+    background-color: #ff0000;
+    border-top: 5px solid #333;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+footer p {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}

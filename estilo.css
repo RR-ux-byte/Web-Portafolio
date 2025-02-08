@@ -1,0 +1,130 @@
+html, body {
+    font-family: 'Bangers', cursive;
+    background-color: #0075fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+* {
+    cursor: url('icons8-cursor-50.png') 16 16, auto !important;
+}
+
+a, button, i {
+    cursor: url('icons8-cursor-50.png') 16 16, auto !important;
+}
+
+/* Cursor al pasar por encima de enlaces e iconos */
+a:hover, button:hover, i:hover {
+    cursor: url('icons8-natural-user-interface-2-50.png') 16 16, auto !important;
+}
+
+a:active, button:active, i:active {
+    cursor: url('icons8-natural-user-interface-2-50.png') 16 16, auto !important;
+}
+
+
+/* 🔹 Estilos del Header */
+header {
+    background-color: #ffcc00;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 5px solid #333;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    flex-grow: 1; /* Evita que el título desplace los iconos */
+    text-align: center;
+}
+
+/* 🔹 Estilos de los iconos sociales */
+.social-icons {
+    display: flex;
+    gap: 15px;
+    margin-right: 40px; /* 🔹 Aumentamos el margen derecho para separarlos del borde */
+}
+
+.social-icons a {
+    color: #333;
+    font-size: 30px;
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #0075fa;
+}
+
+/* 🔹 Estilos del contenido principal */
+main {
+    padding: 20px;
+    flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+section {
+    background-color: #fff;
+    border: 2px solid #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+}
+
+/* 🔹 Estilos de la imagen */
+img {
+    max-width: 300px;
+    border: solid 1px #333;
+    border-radius: 100%;
+}
+
+.foto {
+    padding: 20px;
+    
+}
+
+/* 🔹 Estilos de los proyectos */
+.project {
+    background-color: #e0e0e0;
+    border: 2px dashed #333;
+    margin: 10px 0;
+    padding: 10px;
+}
+
+/* 🔹 Ajustes Responsivos para Pantallas Pequeñas */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+        margin-right: 0;
+    }
+}
+
+/* 🔹 Estilos del Footer */
+footer {
+    background-color: #ff0000;
+    border-top: 5px solid #333;
+    padding: 10px;
+    width: 100%;
+    height: 40px;
+}
+
+footer p {
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
