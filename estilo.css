@@ -118,11 +118,16 @@ img {
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
+        overflow: hidden; /* Evita que la imagen se desborde */
+        padding: 0; /* Evita que el padding afecte el ancho */
+        box-sizing: border-box; /* Asegura que el padding no haga crecer el div */
     }
 
     img {
-        max-width: 100%;
+        max-width: 90%; /* Ajusta la imagen al tamaño del contenedor */
         height: auto;
+        display: block; /* Evita espacios en blanco alrededor de la imagen */
     }
 }
 
